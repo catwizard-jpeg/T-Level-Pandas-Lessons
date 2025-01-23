@@ -1,7 +1,6 @@
 print("step 1")
 print("import the libraries you will need")
 import pandas as pd
-import numpy as np
 
 print("step 2")
 print("get the dataset")
@@ -51,7 +50,7 @@ print("#"*10)
 input()
 
 print("step 8")
-print("print the name of all the columns")
+print("print the names of all the columns")
 
 #Your code goes here:
 
@@ -141,7 +140,7 @@ print("#"*10)
 input()
 
 print("step 17")
-print("what is the mean amount age of all the users")
+print("what is the mean age of all the users")
 
 #Your code goes here:
 
