@@ -71,58 +71,53 @@ print("#"*10)
 input()
 
 
-#This section no longer works! VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV
+print("########################")
+print("#indexing and selecting#")
+print("########################")
 
+print("we are just using this library to get a sample dataset")
+import seaborn as sns
 
-# print("########################")
-# print("#indexing and selecting#")
-# print("########################")
+print("you can load a dataFrame from a dataset contained withing this library")
+tips = sns.load_dataset("tips")
+print("this will only print the first 3 rows")
+print(tips.head(3))
+print("#"*10)
+input()
 
-# print("we are just using this library to get a sample dataset")
-# import os
-# os.system("pip install seaborn")
-# import seaborn as sns
+print("you can make a new dataFrame that only contains the columns")
+print("you want to look at")
+totalBillsAndTips = tips[["total_bill","tip"]]
+print(totalBillsAndTips.head())
+print("#"*10)
+input()
 
-# print("you can load a dataFrame from a dataset contained withing this library")
-# tips = sns.load_dataset("tips")
-# print("this will only print the first 3 rows")
-# print(tips.head(3))
-# print("#"*10)
-# input()
+print("you can make a new dataFrame that only contains certain rows")
+someTips = tips[3:5]
+print(someTips)
+print("#"*10)
+input()
 
-# print("you can make a new dataFrame that only contains the columns")
-# print("you want to look at")
-# totalBillsAndTips = tips[["total_bill","tip"]]
-# print(totalBillsAndTips.head())
-# print("#"*10)
-# input()
+print("you can make a new dataFrame that contains all the rows in a")
+print("range (from row 2 to row 4) and every column between two specific columns")
+someTips = tips.loc[2:4, "tip":"day"]
+print(someTips)
+print("#"*10)
+input()
 
-# print("you can make a new dataFrame that only contains certain rows")
-# someTips = tips[3:5]
-# print(someTips)
-# print("#"*10)
-# input()
+print("you can make use 'iloc' instead of 'loc' if you only want to")
+print("use integer indexes instead of names")
+someTips = tips.iloc[2:4,1:5]
+print(someTips)
+print("#"*10)
+input()
 
-# print("you can make a new dataFrame that contains all the rows in a")
-# print("range (from row 2 to row 4) and every column between two specific columns")
-# someTips = tips.loc[2:4, "tip":"day"]
-# print(someTips)
-# print("#"*10)
-# input()
-
-# print("you can make use 'iloc' instead of 'loc' if you only want to")
-# print("use integer indexes instead of names")
-# someTips = tips.iloc[2:4,1:5]
-# print(someTips)
-# print("#"*10)
-# input()
-
-# print("you can make a new dataFrame using a series of boolean values")
-# test = tips["tip"] > 3
-# print(test)
-# print("#"*10)
-# input()
-# someTips = tips[moreThanThree]
-# print(someTips)
-# print("#"*10)
-# input()
+print("you can make a new dataFrame using a series of boolean values")
+test = tips["tip"] > 3
+print(test)
+print("#"*10)
+input()
+someTips = tips[test]
+print(someTips)
+print("#"*10)
+input()
